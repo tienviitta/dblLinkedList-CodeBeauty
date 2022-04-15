@@ -4,14 +4,14 @@
 #include "node.h"
 
 class DblLinkedList {
-public:
-  Node *head;
-  Node *tail;
-  DblLinkedList();
-  ~DblLinkedList();
-  void AddTail(int value);
-  void PrintForward();
-  void PrintBackward();
+   public:
+    Node *head;
+    Node *tail;
+    DblLinkedList();
+    ~DblLinkedList();
+    void AddTail(int value);
+    void PrintForward();
+    void PrintBackward();
 };
 
-#endif // DBLL_H
+#endif  // DBLL_H
