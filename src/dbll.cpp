@@ -14,8 +14,8 @@ void DblLinkedList::AddTail(int value) {
         head = node;
         tail = node;
     } else {
-        node->prev = tail;
-        tail->next = node;
+        node->right = tail;
+        tail->left = node;
         tail = node;
     }
 }
@@ -24,7 +24,7 @@ void DblLinkedList::PrintForward() {
     Node *trav = head;
     while (trav != nullptr) {
         std::cout << "[" << trav->value << "]=";
-        trav = trav->next;
+        trav = trav->left;
     }
     std::cout << std::endl;
 }
@@ -33,7 +33,7 @@ void DblLinkedList::PrintBackward() {
     Node *trav = tail;
     while (trav != nullptr) {
         std::cout << "=[" << trav->value << "]";
-        trav = trav->prev;
+        trav = trav->right;
     }
     std::cout << std::endl;
 }
@@ -42,7 +42,7 @@ DblLinkedList::~DblLinkedList() {
     Node *trav = head;
     while (head != nullptr) {
         trav = head;
-        head = head->next;
+        head = head->left;
         delete trav;
     }
 }

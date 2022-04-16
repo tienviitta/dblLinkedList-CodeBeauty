@@ -2,6 +2,6 @@
 
 #include <cstddef>
 
-Node::Node() : value(0), next(nullptr), prev(nullptr) {}
+Node::Node() : value(0), left(nullptr), right(nullptr) {}
 
-Node::Node(int value) : value(value), next(nullptr), prev(nullptr) {}
+Node::Node(int value) : value(value), left(nullptr), right(nullptr) {}
