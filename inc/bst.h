@@ -13,5 +13,7 @@ class BinarySearchTree {
 };
 
 void preOrder(Node* root);
+void inOrder(Node* root);
+void postOrder(Node* root);
 
 #endif  // BST_H

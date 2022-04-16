@@ -36,6 +36,10 @@ void BinarySearchTree::addNode(int value) {
 void BinarySearchTree::printTree() {
     preOrder(root);
     std::cout << std::endl;
+    inOrder(root);
+    std::cout << std::endl;
+    postOrder(root);
+    std::cout << std::endl;
 }
 
 BinarySearchTree::~BinarySearchTree() {}
@@ -47,4 +51,22 @@ void preOrder(Node* root) {
     std::cout << "[" << root->value << "]-";
     preOrder(root->left);
     preOrder(root->right);
+}
+
+void inOrder(Node* root) {
+    if (root == nullptr) {
+        return;
+    }
+    inOrder(root->left);
+    std::cout << "[" << root->value << "]-";
+    inOrder(root->right);
+}
+
+void postOrder(Node* root) {
+    if (root == nullptr) {
+        return;
+    }
+    postOrder(root->left);
+    postOrder(root->right);
+    std::cout << "[" << root->value << "]-";
 }
